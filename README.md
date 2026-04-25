@@ -21,6 +21,30 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Instrukcja do postępowania z repozytorium
+
+Do instalacji należy użyć polecenia wykonanego w katalogu np. C:\xampp\htdocs :
+
+git clone <adres_URL>
+
+lub
+
+git clone <adres_URL> <nazwa_nowego_katalogu>
+
+i później w tym katalogu <nazwa_nowego_katalogu> należy wykonać polecenie
+
+composer install
+
+aby zainstalować brakujące pakiety w katalogu vendor
+
+i jeszcze, żeby działała autoryzacja Breeze należy wykonać polecenie
+
+npm install
+
+Do ściągnięcia nowszych wersji
+
+git pull
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
