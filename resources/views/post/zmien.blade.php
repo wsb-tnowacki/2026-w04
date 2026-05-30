@@ -1,4 +1,4 @@
-@extends('layout.template')
+@extends('layout.layout')
 @section('tytul', 'Edycja postu')
 @section('podstrona', 'Formularz edycji posta')
 @section('tresc')
