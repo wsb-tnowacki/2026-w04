@@ -24,10 +24,12 @@
                 </tr>
             </thead>
             @isset($posty)
+            {{-- @php($lp = 1) --}}
+            @php($lp=$posty->firstItem())
                 @forelse ($posty as $post)
                     <tbody>
                         <tr>
-                            <th class="border border-gray-300 px-4 py-2" scope="row">{{ $post['id'] }}</th>
+                            <th class="border border-gray-300 px-4 py-2" scope="row">{{ $lp++ }}</th>
                             <td class="border border-gray-300 px-4 py-2"><a href="{{route('post.show',$post->id)}}">{{$post->tytul}}</a></td>
                             <td class="border border-gray-300 px-4 py-2">{{ $post->user->name }}</td>
                             <td class="border border-gray-300 px-4 py-2">{{ $post->created_at->locale('pl')->setTimezone('Europe/Warsaw')->translatedFormat('j F Y H:i:s') }}</td>
@@ -59,5 +61,9 @@
 
             @endisset
         </table>
+        @isset($posty)
+<div class="my-2">{{$posty->onEachSide(1)->links()}}</div>
+    
+@endisset
     </div>
 @endsection
