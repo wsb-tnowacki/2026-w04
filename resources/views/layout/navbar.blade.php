@@ -9,7 +9,7 @@
     <li class="relative mx-1">
       <a class="block px-2 py-1 text-gray-800 hover:text-gray-600 transition-colors rounded" href="{{route('ogolne.onas')}}">O nas</a>
     </li>
-@auth
+
     <!-- Dropdown -->
     <li class="relative px-2">
       <button @click="open = !open" class="hover:text-blue-600 focus:outline-none">
@@ -24,11 +24,12 @@
         <li class="relative mx-1">
       <a class="block w-full px-3 py-2 text-gray-800 hover:bg-gray-50 " href="{{route('post.index')}}">Lista&nbsp;postów</a>
         </li>
+        @auth
         <li class="relative mx-1">
       <a class="block w-full px-3 py-2 text-gray-800 hover:bg-gray-50" href="{{route('post.create')}}">Dodaj&nbsp;posta</a>
         </li>
+        @endauth
       </ul>
     </li>
-@endauth
   </ul>
 </nav>
